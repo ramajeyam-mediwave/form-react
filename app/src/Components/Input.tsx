@@ -3,6 +3,7 @@ interface inputProps {
   name: string;
   type: string;
   placeholder: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 class Input extends Component<inputProps> {
   render() {
@@ -14,6 +15,7 @@ class Input extends Component<inputProps> {
             name={this.props.name}
             type={this.props.type}
             placeholder={this.props.placeholder}
+            onChange={this.props.onChange}
           />
         </label>
       </div>

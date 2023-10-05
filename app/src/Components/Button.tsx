@@ -1,10 +1,13 @@
-
 import React from "react";
-class Button extends React.Component {
+interface buttonProps {
+  name: string;
+  onClick: () => void;
+}
+class Button extends React.Component<buttonProps> {
   render() {
     return (
       <div>
-        <button>Click</button>
+        <button onClick={this.props.onClick}>{this.props.name}</button>
       </div>
     );
   }
